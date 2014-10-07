@@ -131,7 +131,7 @@ namespace LightningRyze
         
         private static void OrbwalkingOnBeforeAttack(Orbwalking.BeforeAttackEventArgs args)
 		{
-			if (Config.Item("ComboActive").GetValue<KeyBind>().Active || Config.Item("HarassActive").GetValue<KeyBind>().Active)
+			if (Config.Item("ComboActive").GetValue<KeyBind>().Active)
 				args.Process = !(Q.IsReady() || W.IsReady() || E.IsReady() || myHero.Distance(args.Target) >= 600);
 		}
         
